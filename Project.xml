@@ -26,7 +26,10 @@
 	<define name="ACHIEVEMENTS_ALLOWED" />
 	<!-- EXPERIMENT [002]: Discord RPC is impossible on Android (no Discord client to talk to)
 	     and its haxelib is not publicly cloneable, so it broke CI. Desktop keeps it. -->
-	<define name="DISCORD_ALLOWED" unless="ios mobile" />
+	<!-- EXPERIMENT [002]: Discord RPC is desktop-only (it needs a local Discord client).
+	     NOTE: in lime, space-separated conditions in if/unless are AND, not OR.
+	     "unless=ios mobile" would NOT disable it on Android. Hence if="desktop". -->
+	<define name="DISCORD_ALLOWED" if="desktop" />
 	<define name="TRANSLATIONS_ALLOWED" />
 	<define name="VIDEOS_ALLOWED" unless="32bits"/>
 	<define name="ASTC_SUPPORT" if="mobile" />
