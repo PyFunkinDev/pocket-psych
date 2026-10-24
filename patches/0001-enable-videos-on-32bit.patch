@@ -1,0 +1,14 @@
+diff --git a/Project.xml b/Project.xml
+index c0f1541..bbb5a16 100644
+--- a/Project.xml
++++ b/Project.xml
+@@ -26,7 +26,8 @@
+ 	<define name="ACHIEVEMENTS_ALLOWED" />
+ 	<define name="DISCORD_ALLOWED" unless="ios" />
+ 	<define name="TRANSLATIONS_ALLOWED" />
+-	<define name="VIDEOS_ALLOWED" unless="32bits"/>
++	<!-- EXPERIMENT [001]: allow hxvlc on 32-bit builds. Enable with -D video-on-32bit -->
++	<define name="VIDEOS_ALLOWED" if="!32bits || video-on-32bit"/>
+ 	<define name="ASTC_SUPPORT" if="mobile" />
+ 	<define name="IRIS_DEBUG"/>
+ 	
