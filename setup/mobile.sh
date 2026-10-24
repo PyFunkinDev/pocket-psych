@@ -12,7 +12,8 @@ haxelib install flixel-addons 3.2.1
 haxelib install flixel-tools 1.5.1
 haxelib install hscript-iris 1.1.3
 haxelib install tjson 1.4.0
-haxelib git hxdiscord_rpc git@github.com:FunkinPortingMobile/hxdiscord_rpc-android-support master
+haxelib git hxdiscord_rpc git@github.com:FunkinPortingMobile/hxdiscord_rpc-android-support master \
+  || echo "WARN: hxdiscord_rpc unavailable (repo not public) - skipped; Discord RPC is disabled on mobile anyway"
 haxelib install hxvlc 2.0.1 --skip-dependencies
 haxelib install android-manager 1.0.1
 haxelib git lime https://github.com/DeveloperPorting-Stuff/lime-modified main
